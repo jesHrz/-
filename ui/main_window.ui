@@ -34,8 +34,8 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>20</y>
-      <width>411</width>
+      <y>10</y>
+      <width>391</width>
       <height>351</height>
      </rect>
     </property>
@@ -45,8 +45,8 @@
     <widget class="QLabel" name="label_dd">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>245</y>
+       <x>60</x>
+       <y>235</y>
        <width>41</width>
        <height>31</height>
       </rect>
@@ -70,8 +70,8 @@
     <widget class="QLabel" name="label_jsm">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>80</y>
+       <x>40</x>
+       <y>70</y>
        <width>71</width>
        <height>31</height>
       </rect>
@@ -95,8 +95,8 @@
     <widget class="QLabel" name="label_xy">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>120</y>
+       <x>20</x>
+       <y>110</y>
        <width>91</width>
        <height>31</height>
       </rect>
@@ -120,8 +120,8 @@
     <widget class="QLabel" name="label_xq">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>160</y>
+       <x>20</x>
+       <y>150</y>
        <width>91</width>
        <height>31</height>
       </rect>
@@ -145,8 +145,8 @@
     <widget class="QLabel" name="label_jc">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>200</y>
+       <x>20</x>
+       <y>190</y>
        <width>91</width>
        <height>31</height>
       </rect>
@@ -170,8 +170,8 @@
     <widget class="QLabel" name="label_kch">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>40</y>
+       <x>40</x>
+       <y>30</y>
        <width>71</width>
        <height>31</height>
       </rect>
@@ -198,9 +198,9 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>250</x>
-       <y>290</y>
-       <width>112</width>
+       <x>251</x>
+       <y>280</y>
+       <width>91</width>
        <height>34</height>
       </rect>
      </property>
@@ -211,8 +211,8 @@
     <widget class="QComboBox" name="comboBox_xq">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>160</y>
+       <x>120</x>
+       <y>150</y>
        <width>221</width>
        <height>31</height>
       </rect>
@@ -261,8 +261,8 @@
     <widget class="QComboBox" name="comboBox_jc">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>200</y>
+       <x>120</x>
+       <y>190</y>
        <width>221</width>
        <height>31</height>
       </rect>
@@ -301,8 +301,8 @@
     <widget class="QComboBox" name="comboBox_dd">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>240</y>
+       <x>120</x>
+       <y>230</y>
        <width>221</width>
        <height>31</height>
       </rect>
@@ -351,8 +351,8 @@
     <widget class="QLineEdit" name="line_kch">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>40</y>
+       <x>120</x>
+       <y>30</y>
        <width>221</width>
        <height>31</height>
       </rect>
@@ -361,8 +361,8 @@
     <widget class="QLineEdit" name="line_jsm">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>80</y>
+       <x>120</x>
+       <y>70</y>
        <width>221</width>
        <height>31</height>
       </rect>
@@ -371,8 +371,8 @@
     <widget class="QLineEdit" name="line_xy">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>120</y>
+       <x>120</x>
+       <y>110</y>
        <width>221</width>
        <height>31</height>
       </rect>
@@ -383,9 +383,9 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>390</y>
-      <width>411</width>
-      <height>191</height>
+      <y>370</y>
+      <width>391</width>
+      <height>121</height>
      </rect>
     </property>
     <property name="title">
@@ -395,7 +395,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>50</y>
+       <y>30</y>
        <width>91</width>
        <height>31</height>
       </rect>
@@ -414,8 +414,8 @@
      <property name="geometry">
       <rect>
        <x>250</x>
-       <y>50</y>
-       <width>112</width>
+       <y>30</y>
+       <width>91</width>
        <height>34</height>
       </rect>
      </property>
@@ -427,8 +427,8 @@
      <property name="geometry">
       <rect>
        <x>250</x>
-       <y>90</y>
-       <width>112</width>
+       <y>70</y>
+       <width>91</width>
        <height>34</height>
       </rect>
      </property>
@@ -440,7 +440,7 @@
      <property name="geometry">
       <rect>
        <x>120</x>
-       <y>50</y>
+       <y>30</y>
        <width>101</width>
        <height>31</height>
       </rect>
@@ -450,9 +450,9 @@
    <widget class="QTableWidget" name="table_info">
     <property name="geometry">
      <rect>
-      <x>450</x>
+      <x>429</x>
       <y>10</y>
-      <width>580</width>
+      <width>601</width>
       <height>570</height>
      </rect>
     </property>
@@ -477,7 +477,7 @@
      <height>30</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menu">
+   <widget class="QMenu" name="menu_option">
     <property name="title">
      <string>帐号</string>
     </property>
@@ -485,7 +485,15 @@
     <addaction name="separator"/>
     <addaction name="action_exit"/>
    </widget>
-   <addaction name="menu"/>
+   <widget class="QMenu" name="menu_other">
+    <property name="title">
+     <string>其它</string>
+    </property>
+    <addaction name="action_update"/>
+    <addaction name="action_about"/>
+   </widget>
+   <addaction name="menu_option"/>
+   <addaction name="menu_other"/>
   </widget>
   <widget class="QStatusBar" name="statusbar">
    <property name="enabled">
@@ -509,6 +517,16 @@
   <action name="action_exit">
    <property name="text">
     <string>退出</string>
+   </property>
+  </action>
+  <action name="action_update">
+   <property name="text">
+    <string>更新</string>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="text">
+    <string>关于</string>
    </property>
   </action>
  </widget>

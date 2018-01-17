@@ -61,7 +61,7 @@ class SDULogin:
             else:
                 return False
 
-    def post(self, url, post_form):
+    def emit(self, url, method = "post", post_form = None):
         content = {}
         opener = None
 
@@ -74,18 +74,53 @@ class SDULogin:
                 opener = eachURL[base_url]
                 break
 
+        if method == "post":
+            if post_form is None:
+                return
+            if has_url:
+                post_data = bytes(urllib.parse.urlencode(post_form), encoding='utf8')
+                try:
+                    request = urllib.request.Request(url, headers=self.__headers, data=post_data)
+                    response = opener.open(request)
+                except urllib.error.URLError:
+                    pass
+                else:
+                    result = response.read().decode('utf-8')
+                    content = json.loads(result)
+        if method == "get":
+            if has_url:
+                try:
+                    request = urllib.request.Request(url, headers=self.__headers)
+                    response = opener.open(request)
+                except urllib.error.URLError:
+                    pass
+                else:
+                    result = response.read().decode('utf-8')
+                    return result
+
+        return content
+
+    def get(self,url):
+        opener = None
+
+        #   检查是否登陆过
+        base_url = self.__getbaseURL(url)
+        has_url = False
+        for eachURL in self.__baseURLList:
+            if base_url in eachURL.keys():
+                has_url = True
+                opener = eachURL[base_url]
+                break
+
         if has_url:
-            post_data = bytes(urllib.parse.urlencode(post_form), encoding='utf8')
             try:
-                request = urllib.request.Request(url, headers=self.__headers, data=post_data)
+                request = urllib.request.Request(url, headers=self.__headers)
                 response = opener.open(request)
             except urllib.error.URLError:
                 pass
             else:
                 result = response.read().decode('utf-8')
-                content = json.loads(result)
-
-        return content
+                return result
 
     @staticmethod
     #   处理url获得baseURL以判断是否登陆过

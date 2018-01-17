@@ -23,7 +23,6 @@ class LOGINFunc(QtWidgets.QMainWindow, Ui_MainWindow):
         else:
             self.sdu = SDULogin(self.username, self.pwd)
             if self.sdu.login("http://bkjwxk.sdu.edu.cn/b/ajaxLogin"):
-                QtWidgets.QMessageBox.information(self, "提示", "登录成功")
                 self.main.setEnable(True)
                 self.main.button_stop.setEnabled(False)
                 self.main.statusbar.showMessage(self.username + "  已登录")

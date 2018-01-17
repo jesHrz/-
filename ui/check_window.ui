@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1511</width>
+    <height>441</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>已选课程</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icon/favicon.ico</normaloff>../icon/favicon.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1511</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <property name="columnCount">
+     <number>6</number>
+    </property>
+    <column>
+     <property name="text">
+      <string>课程号</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>课程名称</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>课序号</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>上课地点</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>教师</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>课程属性</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
