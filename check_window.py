@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'check_window.ui'
-#
-# Created by: PyQt5 UI code generator 5.9.2
-#
-# WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -41,9 +37,9 @@ class Ui_MainWindow(object):
         self.tableWidget.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.tableWidget.setColumnWidth(4, 80)
 
-        self.tableWidget.setColumnWidth(0,120)
+        self.tableWidget.setColumnWidth(0, 120)
         self.tableWidget.setColumnWidth(1, 230)
-        self.tableWidget.setColumnWidth(2,65)
+        self.tableWidget.setColumnWidth(2, 65)
         self.tableWidget.setColumnWidth(3, 880)
         self.tableWidget.setColumnWidth(5, 80)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -66,5 +62,3 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "教师"))
         item = self.tableWidget.horizontalHeaderItem(5)
         item.setText(_translate("MainWindow", "课程属性"))
-
-

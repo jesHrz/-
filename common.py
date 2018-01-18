@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from bs4 import BeautifulSoup
 
+
 #   按照要求筛选所得到的信息
 def search_classes(searcher, search_kch='', search_jsh='', search_xq='', search_jc='', search_kkxsh='', search_dd=''):
     # 提交表单的地址和header
@@ -29,7 +30,8 @@ def search_classes(searcher, search_kch='', search_jsh='', search_xq='', search_
         for clas in classes:
             if (search_dd in clas['SJDD'] if clas['SJDD'] is not None else True) and \
                     (search_jsh in clas['JSM'] if clas['JSM'] is not None else True) and \
-                    ((search_kch in clas['KCM'] if clas['KCM'] is not None else True) or (search_kch in clas['KCLBMC'] if clas['KCLBMC'] is not None else True)) and \
+                    (search_kch in clas['KCM'] if clas['KCM'] is not None else True or search_kch in clas['KCLBMC'] if
+                    clas['KCLBMC'] is not None else True) and \
                     (search_kkxsh in clas['KKXSH'] if clas['KKXSH'] is not None else True):
                 search_result.append(clas)
 
@@ -41,8 +43,8 @@ def search_classes(searcher, search_kch='', search_jsh='', search_xq='', search_
     return search_result
 
 
-def check_classes(seacher):
-    response = seacher.emit("http://bkjwxk.sdu.edu.cn/f/xk/xs/yxkc", "get")
+def check_classes(searcher):
+    response = searcher.emit("http://bkjwxk.sdu.edu.cn/f/xk/xs/yxkc", "get")
     soup = BeautifulSoup(response, "lxml")
 
     tag = ["KCH", "KCM", "KXH", "SJDD", "JSM", "SX"]
@@ -62,7 +64,7 @@ def check_classes(seacher):
                     content.append(t.string)
 
         if len(content) > 0:
-            dict = {
+            diction = {
                 tag[0]: content[0],
                 tag[1]: content[1],
                 tag[2]: content[2],
@@ -70,6 +72,6 @@ def check_classes(seacher):
                 tag[4]: content[4],
                 tag[5]: content[5]
             }
-            res.append(dict)
+            res.append(diction)
 
     return res

@@ -61,7 +61,7 @@ class SDULogin:
             else:
                 return False
 
-    def emit(self, url, method = "post", post_form = None):
+    def emit(self, url, method="post", post_form=None):
         content = {}
         opener = None
 
