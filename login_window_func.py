@@ -22,13 +22,14 @@ class LOGINFunc(QtWidgets.QMainWindow, Ui_MainWindow):
             QtWidgets.QMessageBox.information(self, "提示", "学号和密码不能为空")
         else:
             self.sdu = SDULogin(username, pwd)
-            if self.sdu.login("http://bkjwxk.sdu.edu.cn/b/ajaxLogin"):
+            result_status, result_info = self.sdu.login("http://bkjwxk.sdu.edu.cn/b/ajaxLogin")
+            if result_status:
                 self.main.setEnable(True)
                 self.main.button_stop.setEnabled(False)
                 self.main.statusbar.showMessage(username + "  已登录")
                 self.close()
             else:
-                QtWidgets.QMessageBox.information(self, "提示", "登录失败")
+                QtWidgets.QMessageBox.information(self, "提示", result_info.replace("\"", ''))
                 self.main.setEnable(False)
 
     def focus(self):

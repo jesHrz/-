@@ -29,7 +29,7 @@ class SDULogin:
 
     #   登录  成功后会在post中使用保存的opener   结果返回是否登录成功
     def login(self, url):
-
+        result = {}
         login_form = {
             'j_username': self.__username,
             'j_password': self.__password
@@ -42,7 +42,7 @@ class SDULogin:
             opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cookie))
             login_respond = opener.open(request)
         except urllib.error.URLError:
-            return False
+            return False, result
         else:
             result = login_respond.read().decode('utf8')
             if 'success' in result:
@@ -57,9 +57,9 @@ class SDULogin:
                 url_list = {base_url: opener}
                 self.__baseURLList.append(url_list)
 
-                return True
+                return True, result
             else:
-                return False
+                return False, result
 
     def emit(self, url, method="post", post_form=None):
         content = {}
