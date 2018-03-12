@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['run.py'],
-             pathex=['E:\\Program\\Python\\SDU-classAssistant\\v3'],
+             pathex=['E:\\Program\\Python\\SDU-classAssistant\\v5'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -28,4 +28,4 @@ exe = EXE(pyz,
           strip=False,
           upx=True,
           runtime_tmpdir=None,
-          console=True )
+          console=False )

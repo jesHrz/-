@@ -1,0 +1,4 @@
+PyQt5-installer
+PyQt5
+bs4
+win10toast
